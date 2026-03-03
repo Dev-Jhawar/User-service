@@ -5,6 +5,8 @@ import com.example.demo.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 @Table(name = "user")
@@ -34,5 +36,8 @@ public class User {
     private String number;
 
     private String address;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
 }
