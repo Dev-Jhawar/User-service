@@ -10,6 +10,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepo extends JpaRepository<Long, User> {
     List<User> getAllUser();
+    User getUserById(Long id);
     User createUser(User user);
     User deleteUser(Long id);
 }
