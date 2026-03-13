@@ -55,7 +55,9 @@ public class UserServiceImpl implements UserService {
         user.setNumber(updateDetails.getNumber());
         user.setAddress(updateDetails.getAddress());
 
-        return UserMapper.toDTO(user);
+        User updatedUser = repo.save(user);
+
+        return UserMapper.toDTO(updatedUser);
     }
 
     @Override

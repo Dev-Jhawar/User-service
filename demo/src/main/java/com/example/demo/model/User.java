@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "users_info")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -28,9 +28,11 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Gender gender;
 
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Column(nullable = false)
